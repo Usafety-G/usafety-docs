@@ -95,17 +95,19 @@
               "irish-hs-reference/data-retention-gdpr",
               "irish-hs-reference/glossary"
             ]
+          },
+          {
+            "group": "Changelog",
+            "icon": "rectangle-list",
+            "pages": [
+              "changelog"
+            ]
           }
         ]
       }
     ],
     "global": {
       "anchors": [
-        {
-          "anchor": "Changelog",
-          "icon": "rectangle-list",
-          "href": "/changelog"
-        },
         {
           "anchor": "Dashboard",
           "icon": "arrow-up-right-from-square",
