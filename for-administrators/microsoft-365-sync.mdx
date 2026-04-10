@@ -1,10 +1,41 @@
 ---
-title: "Microsoft 365 / Outlook sync"
-description: "Enable single sign-on and sync assessments to Outlook calendars."
+title: "Microsoft 365 sign-in"
+description: "Sign in to Usafety with your Microsoft 365 account and join Teams meetings for remote assessments."
 ---
 
-<Note>
-  This page is being written. Usafety supports Microsoft 365 single sign-on and Outlook calendar sync for scheduled assessments. Both are configured from **Settings → Integrations → Microsoft 365**.
+Usafety has two Microsoft integrations. One is set-and-forget, the other is automatic.
 
-  If you need help enabling SSO for your tenant, email [support@usafety.ie](mailto:support@usafety.ie) — we can walk you through the admin consent flow.
+## Sign in with Microsoft (SSO)
+
+Any Usafety user can sign in with their Microsoft 365 account instead of a password. On the login screen, click **Sign in with Microsoft** and you'll be taken through the standard Azure AD consent flow. Once you've granted consent the first time, subsequent sign-ins are one click.
+
+SSO is available platform-wide — there's nothing to configure in your organisation settings, and it works for any Microsoft 365 tenant.
+
+<Note>
+  Microsoft SSO is per-user, not per-organisation. If your organisation requires SSO to be mandatory (i.e. users cannot sign in with a password), contact [support@usafety.ie](mailto:support@usafety.ie) — we can enforce that on your account.
 </Note>
+
+## Teams meetings for remote assessments
+
+When an assessor runs a remote DSE assessment, Usafety automatically generates a Microsoft Teams meeting link and includes it in the booking confirmation email. Employees click the link in their email at the scheduled time to join the call — no Teams account required on their side.
+
+This happens automatically for any booking link with **Booking type: Remote**. There's nothing to enable.
+
+## What Usafety does *not* sync
+
+- **Outlook calendar sync** — Usafety does not push bookings into your Outlook calendar. Bookings live in the Usafety calendar only.
+- **Email sync** — Usafety does not read or send from your Outlook mailbox.
+- **Org-wide directory sync** — Usafety does not import your Microsoft 365 user directory automatically. Staff are added via [CSV import](/importing-data/importing-staff) or manually.
+
+If any of these would be useful for your team, let us know at [support@usafety.ie](mailto:support@usafety.ie) — it helps prioritise the roadmap.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Booking links" icon="link" href="/bookings-and-scheduling/booking-links">
+    Where you set up Remote bookings that use Teams automatically.
+  </Card>
+  <Card title="Importing staff" icon="upload" href="/importing-data/importing-staff">
+    How to onboard employees without directory sync.
+  </Card>
+</CardGroup>

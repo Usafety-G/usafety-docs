@@ -3,35 +3,53 @@ title: "The equipment catalogue"
 description: "Set up your organisation's master list of approved equipment."
 ---
 
-The equipment catalogue is your organisation's master list of chairs, monitors, monitor arms, footrests, keyboards and anything else a DSE assessment might recommend. When an assessment generates a recommendation, it picks from this catalogue — so getting the catalogue right at the start makes everything downstream cleaner.
+The equipment catalogue is your organisation's master list of chairs, monitors, monitor arms, footrests, keyboards and anything else a DSE assessment might recommend. When an assessor generates a recommendation, they pick from this catalogue — so getting the catalogue right at the start makes everything downstream cleaner.
 
 ## Opening the catalogue
 
-Go to **Settings → Equipment**. You'll see every piece of equipment your organisation has added.
+Go to **Settings → Equipment**. You'll land on the *Equipment Management* page with every piece of equipment your organisation has added.
 
 ## Adding an item
 
 <Steps>
   <Step title="Click Add equipment">
-    Top-right of the catalogue page.
+    The button is in the top-right of the Equipment Management page.
   </Step>
   <Step title="Fill in the details">
-    At minimum: **name**, **category** (chair, monitor, etc.) and **manufacturer**. Optional but recommended: **model**, **SKU**, **supplier**, **unit cost** and **currency**. Adding cost is what unlocks the budget-rollup features for SLT reports.
+    Required fields:
+
+    - **Name** — e.g. *Humanscale Freedom Chair*
+    - **Category** — what kind of equipment it is (chair, monitor, footrest, etc.)
+
+    Optional but strongly recommended:
+
+    - **Description** — any additional spec or context
+    - **Model** — the manufacturer's model identifier
+    - **Part number** — the internal SKU or part code you use for ordering
+    - **Supplier** — who you buy it from
+    - **Cost per unit** — the unit price (unlocks budget roll-up in SLT reports)
+    - **Currency** — defaults to EUR
+    - **Link URL** — a link to the supplier page, your internal procurement portal, or spec sheet
+
+    Two flags to be aware of:
+
+    - **Is active** — unticking hides the item from the assessor's picker without deleting the history
+    - **Is default** — marks the item as your organisation's default choice for its category
   </Step>
   <Step title="Save">
     The item is immediately available for assessors and admins to recommend.
   </Step>
 </Steps>
 
-## Editing and deleting
+## Editing and archiving
 
-Click any row to edit. Deleting is only allowed for items that haven't been recommended to an employee yet — if an item has history, you can archive it instead, which hides it from the picker but keeps the audit trail intact.
+Click any row to edit it. There's no separate "archive" action — instead, untick **Is active** on the item and it'll be hidden from the assessor picker while keeping its history in every assessment that referenced it.
 
 ## Why the catalogue matters
 
 - **Consistency.** Assessors pick from the same list every time, so "ergonomic chair" means the same thing across every report.
-- **Budget visibility.** Unit costs roll up into the compliance dashboard and SLT reports.
-- **Faster fulfilment.** SKU and supplier fields mean whoever is placing the order has everything they need without chasing down detail.
+- **Budget visibility.** Cost-per-unit rolls up into SLT reports and the compliance dashboard so finance can see total committed spend at a glance.
+- **Faster fulfilment.** Part number, supplier and link URL mean whoever is placing the order has everything they need in one place.
 
 ## Related
 

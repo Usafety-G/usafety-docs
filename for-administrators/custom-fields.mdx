@@ -1,8 +1,45 @@
 ---
-title: "Custom fields"
-description: "Add your own fields to employees, assessments and equipment."
+title: "Custom fields on booking links"
+description: "Capture extra information from employees when they book — building, manager, accommodation needs, anything else you need."
 ---
 
-<Note>
-  This page is being written. Custom fields are added from **Settings → Custom fields** — choose the entity (employee, assessment, equipment), give the field a name and type (text, number, dropdown, date), and save.
-</Note>
+Usafety supports custom fields on **booking links**. When an employee opens the booking link, custom fields appear as additional form inputs alongside their name, email and phone number. Whatever they enter is saved against the booking.
+
+Custom fields are per booking link — not a global org-level setting. If you need to capture something different for a Dublin rollout than a Cork one, create two booking links with different custom fields.
+
+## Adding custom fields when creating a booking link
+
+When you're creating a new booking link (see [Booking links](/bookings-and-scheduling/booking-links)), scroll down to the *Custom fields* section and click **Add field** for each extra question you want.
+
+For each field, set:
+
+- **Label** — what the employee sees (e.g. *Which building are you in?*)
+- **Type** — *Text*, *Number*, *Dropdown*, or *Date*
+- **Required** — whether the employee can skip it
+- **Options** — for dropdown fields, the list of choices
+
+## Where the data shows up
+
+Custom field values are saved against each booking. You'll see them on:
+
+- The **Calendar** side panel when you click a booking
+- The employee's assessment record
+- Exported PDF reports (appended to employee details)
+
+## Common custom fields
+
+- **Building / floor / desk number** — useful for in-person assessments so the assessor knows where to go
+- **Manager email** — CC the employee's manager on the confirmation email
+- **Accommodation needs** — advance notice for an assessor about wheelchair access, dietary needs, etc.
+- **Existing equipment** — employees flagging what they already have at home
+- **Preferred language** — so you can assign the right assessor
+
+## What custom fields are *not*
+
+Usafety doesn't yet support custom fields on **employees** directly, on **assessments** themselves, or on **equipment catalogue items**. If any of these would help, email [support@usafety.ie](mailto:support@usafety.ie) — we track requests against the roadmap.
+
+## Related
+
+<Card title="Booking links" icon="link" href="/bookings-and-scheduling/booking-links">
+  How to create the booking link you'll attach custom fields to.
+</Card>

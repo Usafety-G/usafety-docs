@@ -3,27 +3,32 @@ title: "The compliance dashboard"
 description: "How to read the Equipment Compliance dashboard and what each status means."
 ---
 
-The Equipment Compliance dashboard (**Reports → Equipment Compliance**) is the single page most H&S managers live in. It shows every employee, their assessment status, and where they are in the equipment fulfilment process.
+The Equipment Compliance dashboard (**Reports → Equipment Compliance**) is the single page most H&S managers live in. It shows every employee with an assessment, their compliance status, and your team's remediation workflow state for each one.
 
-## The columns explained
+## The columns
 
-| Column | What it means |
+| Column | What it shows |
 | --- | --- |
 | **Employee** | Name, email and avatar |
-| **Department** | Pulled from the employee record |
-| **Assessment date** | When the most recent assessment was completed |
-| **Equipment needed** | List of pending equipment items, if any |
-| **Compliance status** | *Compliant*, *Non-compliant* or *Not assessed* — the rolled-up state |
-| **Remediation status** | Your team's workflow state: *No action needed*, *To do*, *In progress*, *Done* |
+| **Compliance** | *Compliant*, *Non-compliant* or *Not assessed* — Usafety's rolled-up data view |
+| **Department** | From the employee record |
+| **Remediation Status** | Your team's workflow state (inline editable) |
+| **Assessment Date** | When the most recent assessment was completed |
+| **Follow-up Needed** | Whether this row needs attention |
+| **Actions** | Quick View, Download Report, and row-level actions |
 
 ## Compliance status vs remediation status
 
-People get these confused. The short version:
+These two often get confused. The short version:
 
-- **Compliance status** is derived from Usafety's data. It's *compliant* when the employee has a recent assessment and no outstanding equipment needs, *non-compliant* when they have outstanding needs, and *not assessed* if they've never completed an assessment.
-- **Remediation status** is what your team sets manually. It tracks *your* workflow — whether you've acted on the recommendations yet.
+- **Compliance status** is derived from Usafety's data. It's *compliant* when the employee has a recent assessment and no outstanding equipment needs, *non-compliant* when they have outstanding needs, and *not assessed* when they've never completed an assessment.
+- **Remediation status** is what your team sets manually. It tracks *your* workflow — whether you've acted on the recommendations yet. Values: *No Action Needed*, *To Do*, *In Progress*, *Done*.
 
-A row can be **non-compliant + done** (you've ordered everything but the employee hasn't confirmed installation), or **compliant + to do** (you still need to follow up with them for some reason).
+A row can be **non-compliant + Done** (you've ordered everything but the employee hasn't confirmed installation), or **compliant + To Do** (you still need to follow up with them for some reason). The two statuses answer different questions.
+
+## Inline editing
+
+The **Remediation Status** column is editable directly from the table — click the dropdown in any row to change it without opening a side panel. Compliance status is not editable: it's derived from the underlying data.
 
 ## Filtering
 
@@ -31,27 +36,25 @@ Every column has a filter. The most useful combinations:
 
 <AccordionGroup>
   <Accordion title="What do I still need to order this month?">
-    Filter by **Compliance status = non-compliant** and **Remediation status = to do**. These are people who need equipment that you haven't started working on yet.
+    Filter by **Compliance = Non-compliant** and **Remediation Status = To Do**. These are people who need equipment that you haven't started working on yet.
   </Accordion>
 
   <Accordion title="Who's fully sorted?">
-    Filter by **Compliance status = compliant**. Use this for exec reports that show what percentage of staff are fully compliant.
+    Filter by **Compliance = Compliant**. Use this for exec reports that show the percentage of staff fully compliant.
   </Accordion>
 
   <Accordion title="Who's never done an assessment?">
-    Filter by **Compliance status = not assessed**. These are the people to send assessments to next.
+    Filter by **Compliance = Not assessed**. These are the people to share a booking link with next.
   </Accordion>
 
   <Accordion title="What's overdue?">
-    Filter by **Assessment date = more than 12 months ago**. Usafety recommends annual reassessment.
+    Filter by **Assessment Date = more than 12 months ago**. Usafety recommends annual reassessment.
   </Accordion>
 </AccordionGroup>
 
-## Cross-page selection
+## Pagination and cross-page selection
 
-The dashboard paginates at 50 rows. To select everyone who matches your filters (not just the current page), tick the header checkbox — Usafety will ask whether you want to select the current page or **all X rows across all pages**. Choose the latter when you're exporting for SLT.
-
-See [Exporting equipment reports](/equipment-and-compliance/exporting-equipment-reports) for the full bulk-export flow.
+The dashboard paginates at 50 rows by default. To select everyone who matches your filters — not just the current page — tick the header checkbox and choose to select across all pages when prompted. This is how you bulk-export a full filtered set; see [Exporting equipment reports](/equipment-and-compliance/exporting-equipment-reports).
 
 ## Related
 
@@ -59,7 +62,7 @@ See [Exporting equipment reports](/equipment-and-compliance/exporting-equipment-
   <Card title="Tracking recommendations" icon="list-check" href="/equipment-and-compliance/tracking-recommendations">
     How individual equipment items progress.
   </Card>
-  <Card title="Reading the dashboard (SLT edition)" icon="briefcase" href="/for-senior-leaders/reading-the-dashboard">
-    A shorter version of this page written for senior leaders.
+  <Card title="Exporting equipment reports" icon="file-export" href="/equipment-and-compliance/exporting-equipment-reports">
+    Download PDFs of every row for SLT approval.
   </Card>
 </CardGroup>

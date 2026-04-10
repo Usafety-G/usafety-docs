@@ -1,10 +1,62 @@
 ---
 title: "Reading the dashboard"
-description: "A 90-second guide to the Usafety compliance dashboard for senior leaders."
+description: "A 90-second guide to the Usafety organisation dashboard for senior leaders."
 ---
 
-<Note>
-  This page is being written for senior leaders. It'll cover: what each status colour means, how to interpret compliance percentages, and which numbers are worth watching.
+When you sign into Usafety, the first page you see is the **organisation dashboard**. This is a short guide on how to read it if your job is to approve spend or review compliance once a month, not to live in the tool day-to-day.
 
-  For now, the practical version: on the compliance dashboard, **non-compliant** means an employee has outstanding equipment needs, **compliant** means they're fully set up, and **not assessed** means they've never completed an assessment. Most H&S conversations focus on moving the non-compliant number down and the not-assessed number to zero.
-</Note>
+## What's on the page
+
+The dashboard has four main areas:
+
+<AccordionGroup>
+  <Accordion title="Assessment stats" icon="chart-simple">
+    A row of cards showing, at a glance:
+
+    - **Pending** — assessments that are scheduled but haven't happened yet
+    - **Scheduled** — upcoming assessments in the calendar
+    - **Completed** — assessments that are done and ready to review
+
+    These are counts, not percentages. If the *Pending* number is stuck for weeks, it's usually because employees haven't booked their slot yet.
+  </Accordion>
+
+  <Accordion title="Book remote assessments" icon="link">
+    A shortcut to get started if you don't yet have a booking link live. It jumps to the Booking Links page with the *Create Link* dialog pre-opened.
+  </Accordion>
+
+  <Accordion title="Recent booking links" icon="list">
+    The last handful of booking links your team has created, with their status (*Pending*, *Approved*, *Rejected*, *Expired*). Useful for SLT to see what's actively accepting bookings.
+  </Accordion>
+
+  <Accordion title="Activity timeline" icon="clock-rotate-left">
+    A running feed of what's happened recently — new bookings, completed assessments, equipment status changes, comments added. Think of this as the "what's new" feed you'd scan once a week.
+  </Accordion>
+</AccordionGroup>
+
+## What SLT usually cares about
+
+If you're reviewing monthly, three things matter most:
+
+1. **Are there outstanding bookings where the employee hasn't completed the assessment?** Look at the *Pending* stat. Big number = follow-up needed.
+2. **What equipment are we about to sign off on?** This isn't on the overview dashboard — open **Reports → Equipment Compliance** and filter to *Non-compliant + To Do*. That's the queue for SLT to approve.
+3. **Are we meeting our annual reassessment obligation?** On **Reports → Equipment Compliance**, sort by *Assessment Date*. Anyone older than 12 months is overdue.
+
+## The numbers to ask your H&S manager
+
+Whether or not you want to learn the tool yourself, these are the four numbers worth asking about in a monthly review:
+
+- **% of staff assessed in the last 12 months** (target: 100%)
+- **% of staff currently compliant** (target: improving trend)
+- **Equipment items in *To Do* status** (your SLT-approval queue)
+- **Equipment items stuck in *Ordered* for more than 4 weeks** (supplier chase list)
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Approving equipment purchases" icon="briefcase" href="/for-senior-leaders/approving-equipment">
+    What you're being asked to decide when you're sent a Usafety equipment report.
+  </Card>
+  <Card title="Compliance dashboard (detailed)" icon="chart-line" href="/equipment-and-compliance/compliance-dashboard">
+    The deeper version of this page for H&S managers.
+  </Card>
+</CardGroup>

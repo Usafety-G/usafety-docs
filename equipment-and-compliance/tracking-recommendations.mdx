@@ -3,58 +3,57 @@ title: "Tracking equipment recommendations"
 description: "How equipment recommendations flow from a DSE assessment into the compliance dashboard."
 ---
 
-When an assessment flags that an employee needs equipment — a new chair, a footrest, a second monitor — that recommendation doesn't just sit in the report. It becomes a trackable item in the **Equipment Compliance** dashboard, with its own fulfilment status.
+When an assessment flags that an employee needs equipment — a new chair, a footrest, a second monitor — that recommendation becomes a trackable item on the Equipment Compliance dashboard with its own fulfilment lifecycle.
 
 ## Where recommendations come from
 
-A recommendation is created automatically when:
-
-- **The self-assessment flags an issue.** If an employee answers that their chair doesn't support their lower back, Usafety maps that answer to a "chair" recommendation.
-- **The assessor adds one during an in-person review.** Certified assessors can add bespoke recommendations with photos and notes during a visit.
-- **An admin adds one manually.** From the employee profile, click **Equipment → Add recommendation** to create one by hand (useful for one-off accommodations).
+A recommendation is created automatically by the assessor during a DSE assessment. They pick items from your [equipment catalogue](/equipment-and-compliance/equipment-catalogue) and flag them against the employee's record. The recommendation then appears on the Equipment Compliance dashboard in its default state.
 
 ## The fulfilment lifecycle
 
-Every recommendation moves through a simple lifecycle:
+Every recommendation moves through eight possible states:
 
 <Steps>
-  <Step title="Pending">
-    Created by the assessment. Nothing's been ordered yet.
+  <Step title="Recommended">
+    Created by the assessment. Default state — nothing has been decided yet.
   </Step>
   <Step title="Approved">
-    You (or SLT) have signed off that it should be bought. Use this when you've got budget approval but haven't placed the order yet.
+    You or SLT have signed off that it should be bought.
   </Step>
   <Step title="Ordered">
-    The equipment is on its way.
+    The purchase order has been placed.
+  </Step>
+  <Step title="Delivered">
+    The equipment has arrived at your site.
   </Step>
   <Step title="Installed">
-    The equipment has been delivered and set up at the employee's workstation.
+    The equipment is set up at the employee's workstation.
   </Step>
   <Step title="Completed">
-    The employee has been told about the new equipment and is using it. This is the terminal state.
+    The employee is using it. Terminal state — compliance is satisfied for this item.
   </Step>
 </Steps>
 
-You can also mark a recommendation **Rejected** if SLT declines it or the employee turns it down.
+Two additional non-terminal states exist: **Rejected** (SLT or the employee declined) and **Returned** (the item was sent back — wrong spec, damaged, no longer needed). Both are kept in the record for audit but don't count against compliance.
 
 ## Updating a recommendation
 
-From **Reports → Equipment Compliance**, click any employee row to open the Quick View. The Equipment tab shows every recommendation with its current status. Click the status dropdown to change it, or click **Track fulfilment** to update multiple items at once.
+From **Reports → Equipment Compliance**, click the Quick View button on the employee row. The *Equipment Required* section lists every recommendation with its current status — change the dropdown next to any item to move it to a new state.
 
 <Tip>
-  Marking an item as **Completed** also updates the employee's overall compliance status, which is what the compliance dashboard counts.
+  Marking every item for an employee as **Completed** is what flips their overall compliance status from non-compliant to compliant.
 </Tip>
 
-## Adding notes and comments
+## Notes and comments
 
-Every recommendation has a comments thread. Use it to record:
+Each assessment has a comment thread attached to it (not to individual equipment items). Use it to record context that applies to the whole assessment:
 
 - Purchase order numbers
 - Delivery dates
 - Conversations with suppliers
 - Why a recommendation was declined
 
-Comments show up on the exported PDF reports, so SLT see your audit trail when you [export equipment reports](/equipment-and-compliance/exporting-equipment-reports).
+Open the comment thread from the assessment Quick View — click the menu button and choose **Add Comment**.
 
 ## Related
 

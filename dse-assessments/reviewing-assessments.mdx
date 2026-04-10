@@ -1,71 +1,72 @@
 ---
 title: "Reviewing a completed assessment"
-description: "Triage a submitted DSE assessment, set remediation status, and push recommendations into the compliance dashboard."
+description: "Open the Quick View for a completed DSE assessment, triage the equipment recommendations and download a report."
 ---
 
-Once an employee submits their assessment, you'll get an email and it shows up as *Completed* on the **Assessments** page. This is where you decide whether they need equipment, follow-up or nothing at all.
+Once an employee's assessment is complete, it shows up on the **Reports → Equipment Compliance** page. The Quick View side panel is where you do the day-to-day work of reviewing it.
 
-## Open the assessment
+## Open the Quick View
 
-Go to **Assessments** in the sidebar. The list sorts completed rows to the top. Click a row to open the Quick View side panel.
+Go to **Reports → Equipment Compliance** in the sidebar. Find the row for the employee — filter by name, department or assessment date if needed — then click the Quick View button on the right of the row. A side panel opens on the right.
 
-## What you'll see
+## What's in the Quick View
 
-- **Employee details** — name, department, email
-- **Answers to each question** — chair, desk, monitor, keyboard, posture, lighting
-- **Any photos** the employee uploaded
-- **Auto-generated recommendations** — equipment or adjustments Usafety suggested based on the answers
-- **Risk level** — low, moderate or high, based on the scoring
-
-## Triage the recommendations
-
-For each recommended item:
+The side panel contains five sections:
 
 <AccordionGroup>
-  <Accordion title="Accept it">
-    Leave it as-is. It'll appear on the Equipment Compliance dashboard as *Pending* fulfilment.
+  <Accordion title="Employee Details" icon="user">
+    Name, email, department, work location, the date of the most recent assessment and the name of the assessor who completed it.
   </Accordion>
 
-  <Accordion title="Modify it">
-    Click the item to change the model, quantity or notes before accepting. Useful if your organisation uses a specific chair model you want to recommend instead of the generic one.
+  <Accordion title="Compliance Status" icon="circle-check">
+    The overall compliance status (*Compliant*, *Non-compliant* or *Not assessed*) and the current remediation status badge.
   </Accordion>
 
-  <Accordion title="Reject it">
-    If the recommendation doesn't apply (e.g. the employee already has that equipment at home and the assessment misread the question), reject it with a note.
+  <Accordion title="Equipment Required" icon="box">
+    Every piece of equipment the assessor recommended, with its current fulfilment state (Recommended, Approved, Ordered, Delivered, Installed, Completed, Rejected, Returned). Each row has an inline dropdown so you can change the state as you act on it.
+  </Accordion>
+
+  <Accordion title="Organization Notes" icon="note-sticky">
+    Any notes attached to the employee or the assessment by you or the assessor.
+  </Accordion>
+
+  <Accordion title="Comments / Activity" icon="comments">
+    A thread of comments attached to this assessment. Use it for PO numbers, supplier calls, SLT approvals or the reason a recommendation was declined.
   </Accordion>
 </AccordionGroup>
 
-## Set the remediation status
+## Actions menu
 
-The remediation status dropdown is how *your* team tracks its workflow. Options:
+Click the **⋮** menu in the Quick View header for:
 
-- **No action needed** — the assessment is fine, nothing to do
-- **To do** — acknowledged, you'll act soon
-- **In progress** — actively ordering or fitting equipment
-- **Done** — everything's sorted
+- **Download Report** — exports a single PDF of this assessment
+- **Add Comment** — opens a sheet to add to the comment thread
 
-This status is independent of the automatic **compliance status**, which Usafety derives from whether the employee still has outstanding equipment needs. See [Compliance dashboard](/equipment-and-compliance/compliance-dashboard) for the difference.
+## Updating equipment items
 
-## Add a comment
+Each item in the *Equipment Required* list has a status dropdown. Changing it updates the fulfilment lifecycle immediately. The available states are:
 
-Every assessment has a comment thread. Use it for:
+*Recommended, Approved, Ordered, Delivered, Installed, Completed, Rejected, Returned*
 
-- Phone-call notes ("called to check on chair delivery")
-- PO numbers
-- Escalations to SLT
-- Reasons for rejecting a recommendation
+See [Fulfilment workflow](/equipment-and-compliance/fulfilment-workflow) for what each state means.
 
-Comments appear on the exported PDF and form part of your audit trail.
+## Setting remediation status
 
-## Download the report
+Remediation status is how your team tracks its own workflow on acting on the findings. It's edited inline from the Equipment Compliance **table** (not from the Quick View — the Quick View shows it as a read-only badge).
 
-Click **Download Report** in the Quick View to get a PDF of this single assessment. Useful for HR files or one-off SLT approvals. For bulk export, see [Exporting equipment reports](/equipment-and-compliance/exporting-equipment-reports).
+Options: *No Action Needed*, *To Do*, *In Progress*, *Done*. See [Remediation workflow](/dse-assessments/remediation-workflow) for the full detail.
+
+## Downloading the report
+
+Click **Download Report** from the Quick View menu to get a PDF of this single assessment. It contains employee details, compliance status, every recommended equipment item with cost and supplier, and any comments. Useful for HR files, one-off SLT approvals or audit requests.
+
+For bulk export of many assessments at once, see [Exporting equipment reports](/equipment-and-compliance/exporting-equipment-reports).
 
 ## Related
 
 <CardGroup cols={2}>
   <Card title="Remediation workflow" icon="list-check" href="/dse-assessments/remediation-workflow">
-    Deeper dive on how remediation tracking works.
+    How your team tracks its workflow state.
   </Card>
   <Card title="Tracking recommendations" icon="box" href="/equipment-and-compliance/tracking-recommendations">
     How recommended items move through fulfilment.
