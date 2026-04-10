@@ -1,47 +1,64 @@
 ---
 title: "Inviting your team"
-description: "Add H&S managers, ops leads and assessors to your Usafety organisation."
+description: "Add other H&S managers and admins to your Usafety organisation."
 ---
 
-Usafety is designed to be shared. Most organisations have a primary H&S manager plus one or two backup admins, and sometimes an external assessor or two.
+Most organisations want two or three admins on Usafety — a primary H&S manager plus one or two backups. Everyone you invite from the People page is added as a full organisation admin.
 
-## Invite a colleague
+## Invite an admin
 
 <Steps>
-  <Step title="Open workspace settings">
-    Click **Settings** in the sidebar, then **Workspace → Members**.
+  <Step title="Open Settings → People">
+    Click **Settings** in the sidebar, then **People**.
   </Step>
-  <Step title="Send the invite">
-    Click **Invite member**. Enter their work email, choose a role (**Admin** or **Member** — see [Roles & permissions](/getting-started/roles-and-permissions)), and click **Send**.
+  <Step title="Click Invite Admin">
+    The **Invite Admin** button is in the top-right. A dialog titled *Invite Organization Admin* opens.
+  </Step>
+  <Step title="Fill in the form">
+    Enter their **email address** (required) and **name** (optional). Click the send button.
   </Step>
   <Step title="They accept">
-    Your colleague receives an email with an **Accept invite** button. It takes them to a short signup flow where they set a password or sign in with Microsoft 365.
+    Your colleague receives an email with an **Accept invite** button. It takes them through a short signup flow — they create a password or sign in with Microsoft 365.
   </Step>
-  <Step title="They show up in the members list">
-    Refresh the members page — their status will flip from *Pending* to *Active* as soon as they accept.
+  <Step title="They appear in People">
+    Refresh the People page — their status will flip from *Pending* to *Active* as soon as they accept.
   </Step>
 </Steps>
 
+<Note>
+  The People page only invites full **admins**. If you need a read-only *member* role (someone who can view data but not change settings or billing), contact [support@usafety.ie](mailto:support@usafety.ie) — we can set that up for you.
+</Note>
+
 <Tip>
-  Inviting an assessor is a different flow. Assessors are added from **Admin → Instructors** (if you have access) or by contacting [support@usafety.ie](mailto:support@usafety.ie).
+  **Inviting an assessor is a different flow.** Certified assessors who run in-person DSE visits are added by the Usafety team, not through the People page. If you need an assessor added to your account, email [support@usafety.ie](mailto:support@usafety.ie).
 </Tip>
 
 ## Resending or cancelling an invite
 
-From **Settings → Workspace → Members**, click the menu next to any pending invite to resend or cancel it. Resent invites use the original link and won't expire the pending invite.
+From **Settings → People**, click the menu next to any pending invite to resend or cancel it. Resending uses the original invite link — it won't expire the pending one.
 
 ## Troubleshooting
 
 <AccordionGroup>
   <Accordion title="They didn't get the email">
-    Ask them to check their spam folder first — invitation emails come from `no-reply@usafety.ie`. If it's not there, cancel the invite and send a fresh one.
+    Ask them to check their spam folder first — invitation emails come from `no-reply@usafety.ie`. If it's not there, cancel the invite from the People page and send a fresh one.
   </Accordion>
 
   <Accordion title="The invite link says it's expired">
-    Invitation links expire after 14 days. Cancel the old invite in **Settings → Members** and send a new one.
+    Invitation links expire after 14 days. Cancel the old invite and send a new one.
   </Accordion>
 
   <Accordion title="They used a different email when accepting">
     Usafety ties the invite to the email address you entered. If they sign up with a personal email instead, the invite won't bind. Cancel and re-invite with the correct address.
   </Accordion>
+
+  <Accordion title="I need to change someone from admin to read-only or remove them">
+    Open **Settings → People**, find the person, and use the menu next to their name. To add a read-only member role, contact support — it's not self-service from the People page yet.
+  </Accordion>
 </AccordionGroup>
+
+## Related
+
+<Card title="Roles & permissions" icon="users" href="/getting-started/roles-and-permissions">
+  What admins can do compared to members and assessors.
+</Card>

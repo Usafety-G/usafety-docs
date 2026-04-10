@@ -1,10 +1,125 @@
 ---
 title: "Booking links"
-description: "Create shareable or embeddable forms so employees can book their own assessment slot."
+description: "Create a booking link, get it approved, and share it with your employees so they can book their own DSE assessment slots."
 ---
 
-<Note>
-  This page is being written. In the meantime, booking links are created from **Admin → Booking Links** inside the app — click **New booking link**, choose the assessor or team, set the available hours, and copy the public URL.
+Booking links are the main way organisations run DSE assessments in Usafety. You (the admin) create a booking link with the dates you want your employees to be assessed. Usafety reviews and approves it. Once approved, you share the public link with your staff and they pick their own time slots.
 
-  If you need detailed guidance now, email [support@usafety.ie](mailto:support@usafety.ie).
+This page walks through the full create → approve → share → book workflow.
+
+<Info>
+  Every booking link has to be approved by the Usafety team before it goes live. This is a quick review to make sure the dates and assessor availability line up — usually same-day.
+</Info>
+
+## 1. Create the booking link
+
+<Steps>
+  <Step title="Open Booking Links">
+    In the sidebar of your organisation dashboard, click **Booking Links**.
+  </Step>
+  <Step title="Click Create Link">
+    The **Create Link** button is in the top-right of the page. A dialog titled *Create New Booking Link* opens.
+  </Step>
+  <Step title="Fill in the details">
+    Give the link a **name** (what you'll recognise it by, e.g. *Dublin HQ — April rollout*), then set:
+
+    - **Scheduling pattern type** — *Weekly*, *Daily*, *One-time*, or *Custom*
+    - **Start date** and **end date** — the window your employees can book within
+    - **Days** (for weekly patterns) — which days of the week slots are available
+    - **Time slots** — *Morning (9AM–12:30PM)* or *Afternoon (1:30PM–5PM)* or both
+    - **Booking type** — *Remote* (video call) or *In person*
+    - If in-person: **default location** name, address and Eircode
+    - **Include public holidays** — leave ticked to include Irish public holidays in the available dates, or untick to exclude them
+  </Step>
+  <Step title="Add custom fields (optional)">
+    If you need employees to tell you something extra when they book — their building, their manager, a specific accommodation need — add custom fields. Each field has a label, a type (text, number, dropdown, date) and can be marked required.
+  </Step>
+  <Step title="Click Create Booking Link">
+    The dialog has a **Create Booking Link** button at the bottom. Click it and the link is saved in *pending* status, waiting for Usafety approval.
+  </Step>
+</Steps>
+
+## 2. Approval by Usafety
+
+Every new booking link goes into a *pending* queue for the Usafety team to review. We check that the dates work, that an assessor is assigned, and that the configuration is valid. Approval is usually same-day during Irish business hours.
+
+You'll get an email the moment the link is approved. The booking link's status will flip from **Pending** to **Approved** on your Booking Links page.
+
+<Note>
+  If a link is rejected, you'll get an email explaining why. You can edit the link and resubmit — it'll go back into the pending queue.
 </Note>
+
+## 3. Share the link with your employees
+
+Once the link shows **Approved**, open it from the Booking Links page. You'll see the **public URL** — it looks like `https://app.usafety.ie/book/<token>`. Click the copy icon next to the URL to copy it to your clipboard.
+
+From there, share it however suits your organisation:
+
+- Paste it into a company-wide email
+- Post it in your intranet or Slack / Teams
+- Embed it in an HR onboarding page
+- Add it to a welcome pack for new starters
+
+The link is public — anyone with it can book. If you've set allowed email domains on the link (ask Usafety support if you need this), Usafety will only accept bookings from employees whose email matches.
+
+## 4. Employees book their own slots
+
+When an employee opens the link, they see:
+
+- A calendar showing only the dates you enabled (public holidays excluded if you unticked the box)
+- The available time slots for that day — morning or afternoon
+- A simple form asking for their **name**, **work email**, **phone number** and any custom fields you added
+
+They pick a date, pick a slot, fill the form and submit. They immediately see a **Booking Confirmed** page and receive a confirmation email with the details.
+
+## 5. Track bookings as they come in
+
+Every time an employee books, it appears in your organisation's **Assessments** list. You can also see bookings by date in the **Calendar** view.
+
+For the assessor running in-person visits, bookings sync automatically to their schedule so they know who's turning up and when.
+
+## Status reference
+
+A booking link is always in one of four states:
+
+| Status | What it means |
+| --- | --- |
+| **Pending** | Submitted for Usafety approval — not yet live. |
+| **Approved** | Live and accepting bookings from employees. |
+| **Rejected** | Usafety has rejected the link. Edit and resubmit. |
+| **Expired** | The scheduling end date has passed — no new bookings possible. |
+
+## Editing an approved link
+
+If you need to extend the end date, add more time slots, or change the location, edit the link from the Booking Links page. Material changes (new dates, new assessor) send the link back to **Pending** for a quick re-approval. Small text edits don't.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My link is still in Pending after 24 hours">
+    Approval is usually same-day but can slip for weekend submissions. If it's been more than one working day, email [support@usafety.ie](mailto:support@usafety.ie) and we'll review it immediately.
+  </Accordion>
+
+  <Accordion title="Employees are getting 'Domain not allowed' errors">
+    Your booking link has an allowed-domains restriction. Either ask the employee to use their work email, or contact support to update the allowed domains list.
+  </Accordion>
+
+  <Accordion title="An employee booked the wrong slot">
+    You can reschedule them from the **Calendar** view — see [Rescheduling & cancellations](/bookings-and-scheduling/rescheduling).
+  </Accordion>
+
+  <Accordion title="I need to bulk-book employees myself, not let them choose">
+    Use the [CSV import flow](/importing-data/importing-staff) instead — it lets you create bookings for a whole list of employees at once. The self-booking link is designed for the *"pick your own time"* experience.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Managing the calendar" icon="calendar-days" href="/bookings-and-scheduling/calendar">
+    See every booking across your organisation in one view.
+  </Card>
+  <Card title="Rescheduling & cancellations" icon="calendar-xmark" href="/bookings-and-scheduling/rescheduling">
+    Move or cancel a booked assessment.
+  </Card>
+</CardGroup>

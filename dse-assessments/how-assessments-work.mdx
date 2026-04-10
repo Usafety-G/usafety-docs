@@ -1,44 +1,53 @@
 ---
 title: "How assessments work"
-description: "A 90-second overview of the Usafety DSE assessment lifecycle."
+description: "A 90-second overview of the Usafety DSE assessment lifecycle, from booking link to remediation."
 ---
 
-Every DSE assessment in Usafety follows the same four-step lifecycle, whether it's a quick self-assessment or an in-person visit from a certified assessor.
+A DSE assessment in Usafety flows through six stages, starting with a booking link and ending with your team acting on the findings.
 
 <Steps>
-  <Step title="Sent">
-    An admin sends an assessment to an employee. The employee gets an email with a secure link — they don't need a Usafety login.
+  <Step title="Booking link created">
+    An admin creates a booking link in Usafety with the dates, time slots and location where assessments will happen. See [Booking links](/bookings-and-scheduling/booking-links).
   </Step>
-  <Step title="Completed">
-    The employee answers questions about their workstation (chair, monitor, keyboard, lighting, posture), optionally uploads photos, and submits. Results appear on the **Assessments** page immediately.
+  <Step title="Link approved">
+    The Usafety team reviews and approves the link. Same-day during Irish business hours.
   </Step>
-  <Step title="Reviewed">
-    A H&S manager opens the completed assessment, reviews the answers and any flagged issues, and sets a remediation status.
+  <Step title="Employees book their own slots">
+    The admin shares the approved public link. Employees click it, pick a date and time, fill in a short form, and get a confirmation email.
   </Step>
-  <Step title="Remediated">
-    If equipment is needed, recommendations show up in the Equipment Compliance dashboard and move through the fulfilment workflow until the employee is fully set up.
+  <Step title="Assessment happens">
+    On the booked date, the assessment runs — remote (video call with an assessor) or in-person (assessor visits the workstation). The assessor records answers, photos and any equipment recommendations.
+  </Step>
+  <Step title="Results appear in Assessments">
+    Once completed, the record shows up on the **Assessments** page with answers, photos, risk level and recommendations.
+  </Step>
+  <Step title="Admin reviews and remediates">
+    A H&S manager opens the completed assessment, reviews the findings, sets a remediation status, and tracks any equipment recommendations through to fulfilment.
   </Step>
 </Steps>
 
-## Self-assessment vs in-person
+## Remote vs in-person
 
-| | Self-assessment | In-person |
+| | Remote | In-person |
 | --- | --- | --- |
-| **Who runs it** | The employee | A certified assessor |
-| **How it's booked** | Admin sends by email | Admin creates a booking in the Calendar |
-| **How long it takes** | 10–15 minutes | 30–45 minutes |
-| **What it covers** | Standard DSE checklist | Full workstation audit with photos and measurements |
-| **When to use it** | Annual compliance, remote workers, large rollouts | Complex accommodations, return-to-work, complaints |
+| **How it runs** | Video call between employee and assessor | Assessor visits the workstation |
+| **Duration** | 20–30 minutes | 30–45 minutes |
+| **Best for** | Remote workers, annual compliance, large rollouts | New workstations, complex accommodations, return-to-work, complaints |
+| **Set on booking link** | Booking type = *Remote* | Booking type = *In person* (with a location) |
 
-Most organisations use self-assessment as the default and reserve in-person visits for specific cases.
+Most organisations use remote for the bulk of staff and reserve in-person visits for specific cases.
+
+## What if I don't want employees choosing their own slot?
+
+If you'd rather book on behalf of your staff — for example, you want to schedule a whole department on the same morning — use the [CSV import flow](/importing-data/importing-staff) to bulk-book employees yourself. The self-service booking link is the primary flow for most customers, but imports are a fully supported alternative.
 
 ## Related
 
 <CardGroup cols={2}>
-  <Card title="Sending an assessment" icon="paper-plane" href="/dse-assessments/sending-an-assessment">
-    How to send a self-assessment to one or many employees.
+  <Card title="Booking links" icon="link" href="/bookings-and-scheduling/booking-links">
+    The full create → approve → share guide.
   </Card>
   <Card title="Reviewing a completed assessment" icon="clipboard-check" href="/dse-assessments/reviewing-assessments">
-    What to do once someone has submitted.
+    What to do once results come in.
   </Card>
 </CardGroup>

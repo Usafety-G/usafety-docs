@@ -26,11 +26,19 @@
             ]
           },
           {
+            "group": "Booking links & scheduling",
+            "icon": "calendar",
+            "pages": [
+              "bookings-and-scheduling/booking-links",
+              "bookings-and-scheduling/calendar",
+              "bookings-and-scheduling/rescheduling"
+            ]
+          },
+          {
             "group": "DSE assessments",
             "icon": "clipboard-check",
             "pages": [
               "dse-assessments/how-assessments-work",
-              "dse-assessments/sending-an-assessment",
               "dse-assessments/reviewing-assessments",
               "dse-assessments/remediation-workflow",
               "dse-assessments/reassessments"
@@ -45,15 +53,6 @@
               "equipment-and-compliance/fulfilment-workflow",
               "equipment-and-compliance/exporting-equipment-reports",
               "equipment-and-compliance/compliance-dashboard"
-            ]
-          },
-          {
-            "group": "Bookings & scheduling",
-            "icon": "calendar",
-            "pages": [
-              "bookings-and-scheduling/booking-links",
-              "bookings-and-scheduling/calendar",
-              "bookings-and-scheduling/rescheduling"
             ]
           },
           {

@@ -1,80 +1,112 @@
 ---
 title: "Quickstart"
-description: "Send your first DSE assessment in under five minutes."
+description: "Get your organisation live on Usafety and send your first booking link to employees."
 ---
 
-This guide walks a new organisation admin from signup to their first completed DSE assessment. If you already have staff imported and just need to send an assessment, jump to [Sending an assessment](/dse-assessments/sending-an-assessment).
+This guide takes a new organisation admin from accepting their invite to having a live booking link that employees can use to book their own DSE assessment slots. Budget about 10 minutes.
 
-## Before you start
+The Usafety workflow most organisations follow is:
 
-You'll need:
+<Steps>
+  <Step title="Accept your invite" />
+  <Step title="Add other admins to your organisation" />
+  <Step title="Create a booking link with the dates you want assessments to happen" />
+  <Step title="Wait for Usafety to approve it (usually same-day)" />
+  <Step title="Share the link with your employees — they book their own slots" />
+</Steps>
 
-- An admin invite to your Usafety organisation (check your inbox for an email from Usafety)
-- At least one employee's name and email to send an assessment to
-- A few minutes
-
-<Note>
-  Usafety supports Microsoft 365 / Outlook sign-in. If your organisation uses Microsoft, your admin can enable single sign-on — see [Microsoft 365 sync](/for-administrators/microsoft-365-sync).
-</Note>
+<Info>
+  Usafety also supports importing or manually adding employees and booking on their behalf. If that's the flow you need, jump to [Importing staff via CSV](/importing-data/importing-staff). Most organisations use the booking-link flow as their primary onboarding.
+</Info>
 
 ## 1. Accept your invite
 
-1. Open the invitation email from Usafety and click **Accept invite**.
-2. Create a password, or sign in with Microsoft if SSO is enabled.
-3. You'll land on your organisation dashboard.
+When Usafety sets up your organisation, you'll receive an email from `no-reply@usafety.ie` with an **Accept invite** button.
 
-## 2. Add your first employee
+1. Click **Accept invite** in the email.
+2. You'll land on the accept-invite page. If you're new, create a password — or sign in with Microsoft 365 if your organisation uses it.
+3. Once accepted, you're redirected straight to your organisation dashboard.
 
-You have two options:
+## 2. Add other admins
 
-<Tabs>
-  <Tab title="Add one employee">
-    1. In the sidebar, click **Staff**.
-    2. Click **Add employee** in the top right.
-    3. Fill in name, email, department and job title.
-    4. Click **Save**.
-  </Tab>
-  <Tab title="Import a CSV">
-    1. In the sidebar, click **Staff**.
-    2. Click **Import**.
-    3. Drop in a CSV with at least `name` and `email` columns.
-    4. Map any custom columns to Usafety fields and click **Import**.
+Most organisations want two or three admins on Usafety — the primary H&S manager and one or two backups.
 
-    See [Importing staff via CSV](/importing-data/importing-staff) for the full guide.
-  </Tab>
-</Tabs>
+<Steps>
+  <Step title="Open Settings → People">
+    Click **Settings** in the sidebar, then **People**.
+  </Step>
+  <Step title="Click Invite Admin">
+    The **Invite Admin** button is in the top-right of the People page. A dialog titled *Invite Organization Admin* opens.
+  </Step>
+  <Step title="Enter their details">
+    Fill in their **email address** (required) and **name** (optional), then send.
+  </Step>
+  <Step title="They accept">
+    Your colleague gets an email with an **Accept invite** button. When they click it and finish signing up, they'll appear in the People list as an active admin.
+  </Step>
+</Steps>
 
-## 3. Send an assessment
+<Note>
+  Everyone invited from the People page is added as an **admin** with full access to your organisation. Usafety also supports a *member* role with read-only access; if you need that, contact [support@usafety.ie](mailto:support@usafety.ie).
+</Note>
 
-1. Open the employee's profile from the **Staff** list.
-2. Click **Send assessment**.
-3. Choose the assessment type (typically **DSE self-assessment**).
-4. Click **Send**. The employee will receive an email with a link to complete the assessment — no login required.
+## 3. Create a booking link
 
-## 4. Review the result
+This is the step that turns Usafety on for your employees. You'll define the dates and times they can book, and Usafety generates a public link you can share.
 
-Once the employee submits the assessment, you'll get an email and the record appears on the **Assessments** page.
+<Steps>
+  <Step title="Open Booking Links">
+    Click **Booking Links** in the sidebar.
+  </Step>
+  <Step title="Click Create Link">
+    The **Create Link** button is in the top-right. A dialog titled *Create New Booking Link* opens.
+  </Step>
+  <Step title="Fill in the basics">
+    - **Name** — something you'll recognise, e.g. *Dublin HQ — April rollout*
+    - **Scheduling pattern** — *Weekly*, *Daily*, *One-time* or *Custom*
+    - **Start and end date** — the window employees can book within
+    - **Days** and **time slots** — morning (9AM–12:30PM), afternoon (1:30PM–5PM), or both
+    - **Booking type** — *Remote* or *In person* (add a location if in-person)
+  </Step>
+  <Step title="Click Create Booking Link">
+    The link is saved with **Pending** status. It's not yet live — Usafety needs to approve it first.
+  </Step>
+</Steps>
 
-1. Open **Assessments** in the sidebar.
-2. Click the completed row to open the Quick View panel.
-3. Review the answers, photos and any equipment recommendations.
-4. Set the remediation status to **To do**, **In progress** or **Done** as you act on it.
+Full detail on every field: [Booking links](/bookings-and-scheduling/booking-links).
 
-Full detail: [Reviewing a completed assessment](/dse-assessments/reviewing-assessments).
+## 4. Wait for approval
 
-## 5. Track equipment compliance
+Every booking link is reviewed by the Usafety team before it goes live. This is usually same-day during Irish business hours. You'll get an email the moment it's approved, and the status on your Booking Links page will flip from **Pending** to **Approved**.
 
-If the assessment flagged equipment needs (new chair, monitor arm, footrest, etc.), they'll show up under **Reports → Equipment compliance**.
+## 5. Share the link
 
-From there you can filter by department or date, update fulfilment status, and — when it's time to get sign-off — [export a PDF report for SLT approval](/equipment-and-compliance/exporting-equipment-reports).
+Once the link is **Approved**, open it from the Booking Links page. You'll see the public URL — it looks like `https://app.usafety.ie/book/<token>`. Click the copy icon next to it.
 
-## Next steps
+Then share it however suits your organisation:
+
+- Company-wide email
+- Internal Slack or Teams channel
+- HR intranet page
+- Onboarding pack for new starters
+
+Employees click the link, pick a date and time, fill in a short form, and they're booked. You'll see each new booking appear on your **Assessments** page as it happens.
+
+## That's it
+
+You've now got a live booking flow. The next things to know:
 
 <CardGroup cols={2}>
-  <Card title="Invite your team" icon="user-plus" href="/getting-started/inviting-your-team">
-    Add other H&S managers and admins to your organisation.
+  <Card title="Reviewing completed assessments" icon="clipboard-check" href="/dse-assessments/reviewing-assessments">
+    What to do once employees have completed their assessments.
   </Card>
-  <Card title="Set up Microsoft 365" icon="microsoft" href="/for-administrators/microsoft-365-sync">
-    Sync assessments to Outlook calendars.
+  <Card title="Exporting equipment reports" icon="file-export" href="/equipment-and-compliance/exporting-equipment-reports">
+    Download PDF reports of equipment recommendations for SLT approval.
+  </Card>
+  <Card title="Managing the calendar" icon="calendar-days" href="/bookings-and-scheduling/calendar">
+    See every booking at a glance and reschedule if needed.
+  </Card>
+  <Card title="Roles & permissions" icon="users" href="/getting-started/roles-and-permissions">
+    Who can see and do what inside your organisation.
   </Card>
 </CardGroup>
