@@ -1,0 +1,144 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Usafety",
+  "description": "Docs for Usafety — DSE assessments, equipment compliance, and workplace safety management for Irish organisations.",
+  "colors": {
+    "primary": "#171717",
+    "light": "#FAFAFA",
+    "dark": "#0A0A0A"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Getting started",
+            "icon": "rocket",
+            "pages": [
+              "index",
+              "getting-started/quickstart",
+              "getting-started/roles-and-permissions",
+              "getting-started/inviting-your-team"
+            ]
+          },
+          {
+            "group": "DSE assessments",
+            "icon": "clipboard-check",
+            "pages": [
+              "dse-assessments/how-assessments-work",
+              "dse-assessments/sending-an-assessment",
+              "dse-assessments/reviewing-assessments",
+              "dse-assessments/remediation-workflow",
+              "dse-assessments/reassessments"
+            ]
+          },
+          {
+            "group": "Equipment & compliance",
+            "icon": "box",
+            "pages": [
+              "equipment-and-compliance/equipment-catalogue",
+              "equipment-and-compliance/tracking-recommendations",
+              "equipment-and-compliance/fulfilment-workflow",
+              "equipment-and-compliance/exporting-equipment-reports",
+              "equipment-and-compliance/compliance-dashboard"
+            ]
+          },
+          {
+            "group": "Bookings & scheduling",
+            "icon": "calendar",
+            "pages": [
+              "bookings-and-scheduling/booking-links",
+              "bookings-and-scheduling/calendar",
+              "bookings-and-scheduling/rescheduling"
+            ]
+          },
+          {
+            "group": "Importing data",
+            "icon": "upload",
+            "pages": [
+              "importing-data/importing-staff",
+              "importing-data/importing-assessments",
+              "importing-data/troubleshooting-imports"
+            ]
+          },
+          {
+            "group": "For administrators",
+            "icon": "shield-halved",
+            "pages": [
+              "for-administrators/organisation-setup",
+              "for-administrators/microsoft-365-sync",
+              "for-administrators/custom-fields",
+              "for-administrators/notification-rules",
+              "for-administrators/billing-and-plans"
+            ]
+          },
+          {
+            "group": "For senior leaders",
+            "icon": "briefcase",
+            "pages": [
+              "for-senior-leaders/reading-the-dashboard",
+              "for-senior-leaders/approving-equipment",
+              "for-senior-leaders/monthly-report-anatomy"
+            ]
+          },
+          {
+            "group": "Irish H&S reference",
+            "icon": "scale-balanced",
+            "pages": [
+              "irish-hs-reference/dse-regulations",
+              "irish-hs-reference/safety-health-welfare-act",
+              "irish-hs-reference/hsa-guidance",
+              "irish-hs-reference/data-retention-gdpr",
+              "irish-hs-reference/glossary"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Changelog",
+          "icon": "rectangle-list",
+          "href": "/changelog"
+        },
+        {
+          "anchor": "Dashboard",
+          "icon": "arrow-up-right-from-square",
+          "href": "https://app.usafety.ie"
+        },
+        {
+          "anchor": "Contact support",
+          "icon": "envelope",
+          "href": "mailto:support@usafety.ie"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@usafety.ie"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open dashboard",
+      "href": "https://app.usafety.ie"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/usafety"
+    }
+  }
+}

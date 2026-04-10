@@ -1,0 +1,77 @@
+---
+title: "Roles & permissions"
+description: "Who can see and do what inside a Usafety organisation."
+---
+
+Usafety uses role-based access control. Every person who interacts with Usafety falls into one of five roles. Understanding them makes it easier to invite the right people and set expectations.
+
+## The five roles
+
+<AccordionGroup>
+  <Accordion title="Organisation admin" icon="shield-halved">
+    **Who:** H&S managers, HR leads, operations managers who own DSE compliance.
+
+    **Can do:** everything inside the organisation — invite people, manage the equipment catalogue, send assessments, configure custom fields, export reports, change billing.
+
+    **Cannot do:** access other organisations or platform-wide settings.
+  </Accordion>
+
+  <Accordion title="Organisation member" icon="user">
+    **Who:** other staff who need to view assessments and compliance data but shouldn't manage billing or invite users.
+
+    **Can do:** view staff, assessments and equipment compliance. Send assessments. Add comments.
+
+    **Cannot do:** change billing, delete the organisation, or manage admins.
+  </Accordion>
+
+  <Accordion title="Assessor / instructor" icon="user-doctor">
+    **Who:** certified external assessors who run in-person or remote DSE assessments on behalf of one or more organisations.
+
+    **Can do:** view their assigned bookings, manage their own availability, upload assessment reports.
+
+    **Cannot do:** see data from organisations they aren't assigned to.
+  </Accordion>
+
+  <Accordion title="Employee" icon="user-helmet-safety">
+    **Who:** the person being assessed. Employees do not log into Usafety — they receive a link by email and complete the assessment in their browser.
+
+    **Can do:** complete an assessment via a secure, tokenised link.
+
+    **Cannot do:** log in, view other employees, or see dashboard data.
+  </Accordion>
+
+  <Accordion title="Super admin" icon="crown">
+    **Who:** the Usafety team. Used only for platform support.
+
+    Super admins never modify customer data without permission. If you need help with your organisation, email [support@usafety.ie](mailto:support@usafety.ie).
+  </Accordion>
+</AccordionGroup>
+
+## What counts as "admin" vs "member"?
+
+The practical difference: **admins control the organisation, members use it**. If in doubt, start someone as a member — you can upgrade them later.
+
+| Action | Admin | Member |
+| --- | :---: | :---: |
+| View staff, assessments, equipment | ✓ | ✓ |
+| Send an assessment | ✓ | ✓ |
+| Add or edit equipment in the catalogue | ✓ | ✓ |
+| Export reports (PDF / ZIP) | ✓ | ✓ |
+| Invite new users | ✓ | — |
+| Change custom fields | ✓ | — |
+| Manage billing & plans | ✓ | — |
+| Delete the organisation | ✓ | — |
+
+## Changing someone's role
+
+1. Open **Settings → Workspace → Members**.
+2. Find the person in the list.
+3. Click the role dropdown next to their name and choose **Admin** or **Member**.
+
+Only existing admins can change roles.
+
+## Next
+
+<Card title="Inviting your team" icon="user-plus" href="/getting-started/inviting-your-team">
+  Add other H&S managers, ops leads or external assessors.
+</Card>

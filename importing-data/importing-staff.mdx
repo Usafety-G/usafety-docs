@@ -1,0 +1,65 @@
+---
+title: "Importing staff via CSV"
+description: "Bulk-onboard employees into Usafety from a spreadsheet."
+---
+
+The fastest way to populate a new Usafety organisation is a CSV import. Usafety's importer auto-detects common column names (Name, Email, Department, Job Title, Instructor, etc.) and lets you map anything else manually.
+
+## Before you start
+
+Export your HR data to a CSV with at least these columns:
+
+- **Name** (full name)
+- **Email** (work email address)
+
+Optional but recommended:
+
+- **Department**
+- **Job title**
+- **Manager email**
+- Any custom fields you use in Usafety
+
+<Tip>
+  The importer handles messy headers — "Employee Name", "Full Name", "emp_name" will all auto-map to the Name field. If a column doesn't auto-detect, you'll map it manually in the next step.
+</Tip>
+
+## Run the import
+
+<Steps>
+  <Step title="Open Staff → Import">
+    Click **Staff** in the sidebar, then **Import** in the top-right.
+  </Step>
+  <Step title="Upload the CSV">
+    Drag and drop or select your file. Usafety parses the first row as headers and shows a preview.
+  </Step>
+  <Step title="Review the mapping">
+    The importer suggests a target field for each column. Check each one — especially for custom fields — and adjust if needed.
+  </Step>
+  <Step title="Start the import">
+    Click **Import**. The job runs in the background; you can close the tab and come back.
+  </Step>
+  <Step title="Review the results">
+    When the job finishes, you'll see a summary: how many rows imported, how many skipped, and why. Any failed rows are downloadable as a CSV you can fix and re-import.
+  </Step>
+</Steps>
+
+## What happens on duplicates
+
+Usafety matches on email address. If an employee already exists:
+
+- **Existing fields** are left alone (so you don't overwrite data people have updated)
+- **Empty fields** are filled in from the CSV
+- **Custom fields** merge — existing values win
+
+If you want a clean overwrite, delete the employee first and re-import.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Importing assessment history" icon="clock-rotate-left" href="/importing-data/importing-assessments">
+    Bring existing assessment records over from another system.
+  </Card>
+  <Card title="Troubleshooting imports" icon="triangle-exclamation" href="/importing-data/troubleshooting-imports">
+    What to do when rows fail to import.
+  </Card>
+</CardGroup>

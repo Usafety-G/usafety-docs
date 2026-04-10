@@ -1,0 +1,52 @@
+---
+title: "Fulfilment workflow"
+description: "How equipment items move from recommended to installed."
+---
+
+Once an assessment recommends a piece of equipment, it becomes a fulfilment item. Fulfilment items have their own lifecycle (pending → approved → ordered → installed → completed) so you can track every piece of equipment across your organisation from one place.
+
+## The states
+
+<AccordionGroup>
+  <Accordion title="Pending">
+    Default state. The assessment has recommended this item, but nothing has happened yet.
+  </Accordion>
+
+  <Accordion title="Approved">
+    SLT or finance has signed off. Use this to mark items that are cleared to buy but not yet ordered.
+  </Accordion>
+
+  <Accordion title="Ordered">
+    The purchase order is placed.
+  </Accordion>
+
+  <Accordion title="Installed">
+    The equipment is on the employee's desk and set up.
+  </Accordion>
+
+  <Accordion title="Completed">
+    The employee has confirmed they're using it. The item stops counting against compliance at this point.
+  </Accordion>
+
+  <Accordion title="Rejected">
+    SLT declined, the employee refused, or the item is no longer needed. Rejected items are kept for audit but don't affect compliance.
+  </Accordion>
+</AccordionGroup>
+
+## Updating a single item
+
+Open the employee's Quick View from the Equipment Compliance dashboard, go to the Equipment tab, and change the dropdown next to any item.
+
+## Bulk updates
+
+If a whole shipment has arrived, open the employee profile and click **Mark all as installed** — or use the bulk action bar on the Equipment Compliance dashboard to mark multiple employees' equipment at once.
+
+## Comments and audit trail
+
+Every status change is logged with the user and timestamp. You can add a comment at any time (e.g. "PO #12345, expected 10 May"). The comment thread appears on the exported PDF report.
+
+## Related
+
+<Card title="Exporting equipment reports" icon="file-export" href="/equipment-and-compliance/exporting-equipment-reports">
+  Download PDFs of the fulfilment status for SLT approval.
+</Card>

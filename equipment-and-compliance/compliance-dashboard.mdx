@@ -1,0 +1,65 @@
+---
+title: "The compliance dashboard"
+description: "How to read the Equipment Compliance dashboard and what each status means."
+---
+
+The Equipment Compliance dashboard (**Reports → Equipment Compliance**) is the single page most H&S managers live in. It shows every employee, their assessment status, and where they are in the equipment fulfilment process.
+
+## The columns explained
+
+| Column | What it means |
+| --- | --- |
+| **Employee** | Name, email and avatar |
+| **Department** | Pulled from the employee record |
+| **Assessment date** | When the most recent assessment was completed |
+| **Equipment needed** | List of pending equipment items, if any |
+| **Compliance status** | *Compliant*, *Non-compliant* or *Not assessed* — the rolled-up state |
+| **Remediation status** | Your team's workflow state: *No action needed*, *To do*, *In progress*, *Done* |
+
+## Compliance status vs remediation status
+
+People get these confused. The short version:
+
+- **Compliance status** is derived from Usafety's data. It's *compliant* when the employee has a recent assessment and no outstanding equipment needs, *non-compliant* when they have outstanding needs, and *not assessed* if they've never completed an assessment.
+- **Remediation status** is what your team sets manually. It tracks *your* workflow — whether you've acted on the recommendations yet.
+
+A row can be **non-compliant + done** (you've ordered everything but the employee hasn't confirmed installation), or **compliant + to do** (you still need to follow up with them for some reason).
+
+## Filtering
+
+Every column has a filter. The most useful combinations:
+
+<AccordionGroup>
+  <Accordion title="What do I still need to order this month?">
+    Filter by **Compliance status = non-compliant** and **Remediation status = to do**. These are people who need equipment that you haven't started working on yet.
+  </Accordion>
+
+  <Accordion title="Who's fully sorted?">
+    Filter by **Compliance status = compliant**. Use this for exec reports that show what percentage of staff are fully compliant.
+  </Accordion>
+
+  <Accordion title="Who's never done an assessment?">
+    Filter by **Compliance status = not assessed**. These are the people to send assessments to next.
+  </Accordion>
+
+  <Accordion title="What's overdue?">
+    Filter by **Assessment date = more than 12 months ago**. Usafety recommends annual reassessment.
+  </Accordion>
+</AccordionGroup>
+
+## Cross-page selection
+
+The dashboard paginates at 50 rows. To select everyone who matches your filters (not just the current page), tick the header checkbox — Usafety will ask whether you want to select the current page or **all X rows across all pages**. Choose the latter when you're exporting for SLT.
+
+See [Exporting equipment reports](/equipment-and-compliance/exporting-equipment-reports) for the full bulk-export flow.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Tracking recommendations" icon="list-check" href="/equipment-and-compliance/tracking-recommendations">
+    How individual equipment items progress.
+  </Card>
+  <Card title="Reading the dashboard (SLT edition)" icon="briefcase" href="/for-senior-leaders/reading-the-dashboard">
+    A shorter version of this page written for senior leaders.
+  </Card>
+</CardGroup>

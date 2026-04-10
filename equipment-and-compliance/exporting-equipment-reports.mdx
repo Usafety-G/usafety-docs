@@ -1,0 +1,137 @@
+---
+title: "Exporting equipment reports"
+description: "Download PDF or ZIP reports of employee equipment recommendations, filtered by date, team or status — ideal for SLT approval."
+---
+
+If you need to bring equipment recommendations to your senior leadership team (SLT) for approval, Usafety can export full PDF reports for one employee, a handful, or everyone in your organisation. You can filter by department, date range, assessment type and compliance status before you export, so SLT only see the rows that matter.
+
+<Info>
+  Every exported PDF contains the full breakdown SLT usually ask for: employee details, assessment date, compliance status, equipment required (with model, supplier and cost), quantities and any assessor notes.
+</Info>
+
+## Open the Equipment Compliance report
+
+<Steps>
+  <Step title="Go to Reports → Equipment Compliance">
+    In the left sidebar, click **Reports**, then **Equipment Compliance**. You'll see a table of every employee with an assessment and their current equipment-compliance status.
+  </Step>
+</Steps>
+
+## Filter down to what you need
+
+Use the toolbar above the table to narrow the data:
+
+| Filter | What it does |
+| --- | --- |
+| **Search** | Free-text search by employee name |
+| **Department** | Limit to a specific team or site |
+| **Equipment type** | Only show rows that need a certain category (e.g. chairs, monitor arms, footrests) |
+| **Compliance status** | Compliant / non-compliant / not assessed |
+| **Remediation status** | To do / in progress / done |
+| **Assessment date** | Date range for when the assessment was completed |
+
+<Tip>
+  Filters are stored in the URL, so once you've set them up the way SLT wants, you can bookmark or share the link with another admin.
+</Tip>
+
+## Select the employees you want
+
+You have three ways to select rows:
+
+<Tabs>
+  <Tab title="One employee">
+    Click the row to open the Quick View panel, then click **Download Report**. A single PDF downloads to your computer.
+  </Tab>
+  <Tab title="A few employees">
+    Tick the checkbox on the left of each row. A bulk-action bar appears at the bottom of the page.
+  </Tab>
+  <Tab title="Everyone (across all pages)">
+    Tick the **header checkbox** at the top of the first column. Usafety will ask whether you want to select just the current page or **all rows that match your filters across every page** — click the "select all across all pages" option.
+  </Tab>
+</Tabs>
+
+## Download
+
+Once you have rows selected, open the action bar at the bottom of the page and click **Download**.
+
+- **One employee selected** → you get a single PDF named after the employee.
+- **Multiple employees selected** → Usafety bundles every employee's PDF into a ZIP file named `DSE_Reports_YYYY-MM-DD.zip`. Each PDF inside is named after the employee.
+
+<Warning>
+  Bulk downloads process each report one at a time on the server, so a ZIP of 50+ employees can take a minute or two. Leave the tab open until the download starts — you'll see progress toasts in the bottom right.
+</Warning>
+
+## What's in each PDF
+
+Every PDF contains:
+
+- Employee name, email and department
+- Assessment date and assessor (if in-person)
+- Overall compliance status (compliant / non-compliant / not assessed)
+- Every piece of equipment recommended, with:
+  - Name, model, description
+  - Supplier and unit cost (if set in your equipment catalogue)
+  - Quantity needed
+  - Current fulfilment status (pending, ordered, installed, completed)
+  - Any assessor notes
+- Remediation status and any comments added by your team
+
+## Typical workflows
+
+<AccordionGroup>
+  <Accordion title="Monthly SLT equipment approval" icon="calendar-days">
+    1. Filter by **Assessment date** → last month.
+    2. Filter by **Compliance status** → *non-compliant* (people who still need equipment).
+    3. Select all across all pages.
+    4. Download as ZIP.
+    5. Attach the ZIP to your SLT board pack.
+  </Accordion>
+
+  <Accordion title="Departmental budget request" icon="building">
+    1. Filter by **Department** → the team you're requesting budget for.
+    2. Filter by **Remediation status** → *to do*.
+    3. Select all, download ZIP.
+    4. The cost fields in each PDF let finance tally the total spend.
+  </Accordion>
+
+  <Accordion title="Single-employee sign-off" icon="user">
+    If SLT only need sign-off on one person (e.g. a bespoke chair for an accommodation request), open the employee row, click **Download Report**, and email the PDF.
+  </Accordion>
+</AccordionGroup>
+
+## Can I export to Excel or CSV instead of PDF?
+
+Not yet — the current export is PDF per employee, bundled into a ZIP for bulk. Most organisations bring the PDFs to SLT directly because they include photos and assessor notes, which spreadsheets can't represent.
+
+If you specifically need a flat spreadsheet of equipment + cost + employee for finance, email [support@usafety.ie](mailto:support@usafety.ie) — we can generate a one-off CSV from the backend while we work on building an in-dashboard version.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The Download button is greyed out">
+    You need at least one row selected. Tick a checkbox or the header checkbox first.
+  </Accordion>
+
+  <Accordion title="A PDF says 'No report available'">
+    That employee doesn't have a completed assessment yet. Send them an assessment first — see [Sending an assessment](/dse-assessments/sending-an-assessment).
+  </Accordion>
+
+  <Accordion title="The ZIP download failed halfway">
+    Usafety processes reports one at a time and continues even if an individual report fails. If the whole ZIP fails, try selecting a smaller batch (50 at a time is a safe ceiling). If it keeps failing, contact [support@usafety.ie](mailto:support@usafety.ie).
+  </Accordion>
+
+  <Accordion title="I need older data — the date filter stops at the assessment date">
+    The date filter is based on when the assessment was completed, not when the employee joined. If you need historical data going back further than Usafety currently shows, contact support.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Tracking equipment recommendations" icon="list-check" href="/equipment-and-compliance/tracking-recommendations">
+    How recommendations flow from an assessment into the compliance dashboard.
+  </Card>
+  <Card title="Approving equipment (for SLT)" icon="briefcase" href="/for-senior-leaders/approving-equipment">
+    What senior leaders need to know when they receive a PDF report.
+  </Card>
+</CardGroup>
