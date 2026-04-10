@@ -50,4 +50,4 @@ Changes pushed to `main` deploy automatically via the Mintlify GitHub app. Insta
 
 ## Help
 
-Something broken? Email [support@usafety.ie](mailto:support@usafety.ie).
+Something broken? Email [info@usafety.ie](mailto:info@usafety.ie).

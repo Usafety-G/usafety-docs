@@ -48,11 +48,11 @@
             "group": "Equipment & compliance",
             "icon": "box",
             "pages": [
-              "equipment-and-compliance/equipment-catalogue",
+              "equipment-and-compliance/compliance-dashboard",
               "equipment-and-compliance/tracking-recommendations",
               "equipment-and-compliance/fulfilment-workflow",
               "equipment-and-compliance/exporting-equipment-reports",
-              "equipment-and-compliance/compliance-dashboard"
+              "equipment-and-compliance/equipment-catalogue"
             ]
           },
           {
@@ -110,12 +110,12 @@
         {
           "anchor": "Dashboard",
           "icon": "arrow-up-right-from-square",
-          "href": "https://app.usafety.ie"
+          "href": "https://booking.usafety.ie"
         },
         {
           "anchor": "Contact support",
           "icon": "envelope",
-          "href": "mailto:support@usafety.ie"
+          "href": "mailto:info@usafety.ie"
         }
       ]
     }
@@ -128,13 +128,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@usafety.ie"
+        "href": "mailto:info@usafety.ie"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Open dashboard",
-      "href": "https://app.usafety.ie"
+      "href": "https://booking.usafety.ie"
     }
   },
   "footer": {
