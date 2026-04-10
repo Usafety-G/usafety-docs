@@ -1,54 +1,49 @@
 ---
 title: "Rescheduling & cancellations"
-description: "Move or cancel an employee's booked DSE assessment."
+description: "How to move or cancel an employee's booked DSE assessment."
 ---
 
-Employees occasionally need to change the time they picked, or an assessor has to cancel at short notice. Usafety handles both from the Calendar view.
+Employees occasionally need to change the time they picked, or an assessor has to cancel at short notice. Usafety's in-app rescheduling experience is still being built, so the flow today depends on who needs to change what.
 
-## Reschedule a booking
+<Note>
+  **A dedicated in-app Reschedule button in the Calendar side panel is on the roadmap.** Until it ships, use the approaches below.
+</Note>
 
-<Steps>
-  <Step title="Open the Calendar">
-    Click **Calendar** in the organisation sidebar.
-  </Step>
-  <Step title="Find the booking">
-    Navigate to the date the booking is currently on. Click the event to open the side panel.
-  </Step>
-  <Step title="Click Reschedule">
-    Pick a new date and time from the available slots on the same booking link.
-  </Step>
-  <Step title="Confirm">
-    Both the employee and the assessor receive an email with the updated time. The booking moves in the calendar immediately.
-  </Step>
-</Steps>
+## Employee-led rescheduling
 
-<Tip>
-  Rescheduled bookings stay linked to their original booking link, so they still count against the booking link's capacity and date range.
-</Tip>
+The public booking link supports a reschedule URL parameter, so if you want to let an employee pick a new slot themselves, you can send them a link in the form:
 
-## Cancel a booking
+```
+https://booking.usafety.ie/book/<token>?reschedule=true
+```
 
-<Steps>
-  <Step title="Open the booking from the Calendar">
-    Same as above — click the event to open the side panel.
-  </Step>
-  <Step title="Click Cancel">
-    You'll be asked to confirm. Optionally add a reason.
-  </Step>
-  <Step title="Confirmation emails go out">
-    The employee and assessor both receive a cancellation email. The booking is removed from the calendar but kept in the Assessments list with a *cancelled* status for audit.
-  </Step>
-</Steps>
+This opens the booking form pre-loaded in reschedule mode so they can choose a new date and time within the same booking link's window. Useful for one-off changes where the employee knows which time suits them.
 
-## Can an employee reschedule themselves?
+## Admin-led rescheduling
 
-Not yet. If an employee needs to change their slot, they should contact you (the admin) and you reschedule on their behalf from the Calendar. This is on the roadmap.
+If you (the admin) need to move a booking — for example, the assessor can't make it and you want to pick a new slot yourself — email [info@usafety.ie](mailto:info@usafety.ie) with:
+
+- The employee's name and email
+- The current booking date and time
+- The new date and time you'd like
+
+We'll reschedule it on our side and trigger the employee and assessor notifications the same way an in-app reschedule would.
+
+## Cancelling a booking
+
+To cancel a booking, open it from the **Calendar** view and use the cancellation controls in the side panel. If the cancellation controls aren't visible for the booking you need to cancel, email [info@usafety.ie](mailto:info@usafety.ie) — we can cancel on your behalf and send the confirmation emails.
+
+Cancelled bookings stay in the **Assessments** list with a *cancelled* status so you have an audit trail.
+
+## Why this is clunky right now
+
+Usafety's rescheduling UI is in-between versions. The underlying data model, the emails and the logic all work — but the admin-facing button in the Calendar side panel isn't exposed yet. We're prioritising it because customers are asking. If rescheduling is a daily pain point for your organisation, tell us at [info@usafety.ie](mailto:info@usafety.ie) so we can move it up the list.
 
 ## Related
 
 <CardGroup cols={2}>
   <Card title="Managing the calendar" icon="calendar-days" href="/bookings-and-scheduling/calendar">
-    Where you reschedule and cancel from.
+    Where you'll do this once the in-app flow lands.
   </Card>
   <Card title="Booking links" icon="link" href="/bookings-and-scheduling/booking-links">
     The link the original booking came from.

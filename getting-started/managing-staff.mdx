@@ -1,0 +1,99 @@
+---
+title: "Managing staff"
+description: "Add, filter, search and manage the employees in your Usafety organisation."
+---
+
+The **Staff Members** page is where every employee in your organisation lives. You'll spend more time here than anywhere else during an annual rollout or when chasing outstanding assessments.
+
+## Opening the page
+
+Click **Staff** in the sidebar. The page header reads *Staff Members* with a short subtitle — *View and manage staff members in your organization*.
+
+## What's on the page
+
+The staff table shows six columns by default:
+
+| Column | What it shows |
+| --- | --- |
+| **Name** | Employee name and work email. Click the name to open their profile. |
+| **Department** | Department assigned to the employee |
+| **Assessment Status** | Their current assessment status badge |
+| **Last Assessment** | When the most recent assessment was completed |
+| **Assessor** | The assessor assigned to the most recent assessment (if any) |
+| **Added** | When the employee was added to Usafety |
+
+You can hide or show columns using the **Columns** selector in the toolbar.
+
+## Adding staff
+
+Two top-right buttons:
+
+- **New Staff Member** — opens a dialog to add one employee by hand. Fill in name, email, department and any custom fields, then save.
+- **Import / Export** — a dropdown with *Import CSV* (bulk upload from a spreadsheet) and *Export as CSV* (download the current filtered list).
+
+For the CSV import flow in full, see [Importing staff via CSV](/importing-data/importing-staff).
+
+## Searching and filtering
+
+- **Search** — the search box at the top of the table matches on name and email
+- **Advanced filter builder** — click the filter button to stack multiple conditions (e.g. *Department = Marketing AND Last Assessment > 12 months ago*). Useful for finding who's overdue or who hasn't been assessed yet.
+- **Column sorting** — click any column header to sort ascending or descending
+
+<Tip>
+  A common filter combination for annual reassessment cycles: **Last Assessment date more than 12 months ago** → select all → use the CSV export to get a list of everyone who needs rebooking, then send them your current booking link.
+</Tip>
+
+## Bulk actions
+
+Tick the checkbox on one or more rows to reveal the bulk action bar at the bottom of the page:
+
+- **Export as CSV** — download the selected rows as a spreadsheet
+- **Add Staff Member** — opens the add dialog (same as the top-right button)
+- **Import CSV** — triggers the import flow
+
+## The employee profile
+
+Click any employee's name to open their profile page. It's split into three main tabs plus a right-hand sidebar.
+
+### Main tabs
+
+<AccordionGroup>
+  <Accordion title="Profile">
+    Their core details — name, email, department, job title, manager, and any custom fields. Editable if you're an admin.
+  </Accordion>
+
+  <Accordion title="Reports">
+    Every assessment report this employee has ever had, with download links.
+  </Accordion>
+
+  <Accordion title="Assessments">
+    The full history of assessments for this employee — scheduled, in progress, completed, cancelled — sortable by date.
+  </Accordion>
+</AccordionGroup>
+
+### Right sidebar
+
+<AccordionGroup>
+  <Accordion title="Details">
+    Quick-reference info — email, internal ID, date they joined Usafety.
+  </Accordion>
+
+  <Accordion title="Activity">
+    An audit log of every action taken on this employee record. Useful for compliance questions ("when did we send them the booking link?", "when did they complete their last assessment?").
+  </Accordion>
+
+  <Accordion title="Comments">
+    A comment thread attached to the employee. Use it for HR notes, accommodation context, or reminders for your team.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Importing staff via CSV" icon="upload" href="/importing-data/importing-staff">
+    Bulk-onboard employees from a spreadsheet.
+  </Card>
+  <Card title="Booking links" icon="link" href="/bookings-and-scheduling/booking-links">
+    Share a self-service booking link with the staff you've added.
+  </Card>
+</CardGroup>

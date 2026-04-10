@@ -22,7 +22,8 @@
               "index",
               "getting-started/quickstart",
               "getting-started/roles-and-permissions",
-              "getting-started/inviting-your-team"
+              "getting-started/inviting-your-team",
+              "getting-started/managing-staff"
             ]
           },
           {
@@ -60,7 +61,6 @@
             "icon": "upload",
             "pages": [
               "importing-data/importing-staff",
-              "importing-data/importing-assessments",
               "importing-data/troubleshooting-imports"
             ]
           },
@@ -69,9 +69,11 @@
             "icon": "shield-halved",
             "pages": [
               "for-administrators/organisation-setup",
+              "for-administrators/workspace-settings",
+              "for-administrators/reports-and-emails",
+              "for-administrators/notification-rules",
               "for-administrators/microsoft-365-sync",
               "for-administrators/custom-fields",
-              "for-administrators/notification-rules",
               "for-administrators/billing-and-plans"
             ]
           },
