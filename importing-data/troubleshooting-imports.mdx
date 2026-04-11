@@ -1,10 +1,119 @@
 ---
 title: "Troubleshooting imports"
-description: "What to do when rows fail to import."
+description: "Common reasons a CSV import fails or produces unexpected results, and how to fix them."
 ---
 
-<Note>
-  This page is being written. If your import is failing, download the errors CSV from the import summary — it lists exactly which rows failed and why. Common causes: invalid email format, duplicate rows, custom field values that don't match the allowed options.
+CSV imports fail occasionally. When they do, Usafety gives you an errors download — a CSV listing only the rows that failed, with the reason each one failed. Fix those rows and re-run the import. This page walks through the most common failures and how to resolve them.
 
-  If you're stuck, email [info@usafety.ie](mailto:info@usafety.ie) with the errors CSV attached.
-</Note>
+## Where the errors file comes from
+
+When an import job finishes, the summary screen shows:
+
+- How many rows succeeded
+- How many rows failed
+- A **Download errors CSV** button
+
+The errors CSV has the same columns as your original file plus an extra `error_reason` column explaining why each row was skipped.
+
+## Common failures and fixes
+
+<AccordionGroup>
+  <Accordion title="Invalid email format">
+    **Symptom:** `Invalid email address`
+
+    **Cause:** The email column contains a value that isn't a valid email (missing `@`, spaces, typos).
+
+    **Fix:** Open the errors CSV, find the bad addresses and correct them. Common culprits: trailing spaces, smart quotes copied from Word, Unicode whitespace. A quick `TRIM()` formula in Excel catches most of these.
+  </Accordion>
+
+  <Accordion title="Duplicate employee">
+    **Symptom:** `Employee already exists`
+
+    **Cause:** An employee with that email is already in your organisation. Usafety matches on email, so duplicates are skipped rather than overwritten.
+
+    **Fix:** If the existing employee is correct, no action needed — they're already in. If you want to update fields on the existing employee, either edit them in the app or delete the employee first and re-import.
+  </Accordion>
+
+  <Accordion title="Missing required column">
+    **Symptom:** `Missing required field: name` (or `email`)
+
+    **Cause:** The CSV doesn't have a column that maps to name or email, or the cell is empty in that row.
+
+    **Fix:** Check the first row of your CSV — the header row — contains columns the importer can recognise as name and email. Common valid headers: *Name, Full Name, Employee Name, emp_name* for name; *Email, Email Address, Work Email* for email. If a row is missing data, either fill it in or delete the row.
+  </Accordion>
+
+  <Accordion title="Unknown custom field value">
+    **Symptom:** `Value 'Madrid' not allowed for field 'Office'`
+
+    **Cause:** You have a custom field with a fixed list of allowed options (e.g. dropdown), and the CSV contains a value that isn't in the list.
+
+    **Fix:** Either add the new value to the allowed list in Usafety before importing, or correct the CSV to use an existing option. Dropdown values are case-sensitive.
+  </Accordion>
+
+  <Accordion title="Department not recognised">
+    **Symptom:** `Department 'engineering' not found`
+
+    **Cause:** The department column has a value that doesn't match an existing department in your organisation.
+
+    **Fix:** Usafety auto-creates departments by default, so this error usually means the department name has a typo or trailing whitespace. Clean the CSV and re-import.
+  </Accordion>
+
+  <Accordion title="Non-UTF-8 character encoding">
+    **Symptom:** Garbled characters in names (e.g. `Ã¡` instead of `á`), or rows silently skipped
+
+    **Cause:** The CSV was saved in a non-UTF-8 encoding (common when exporting from older versions of Excel on Windows — *Windows-1252* is the usual suspect).
+
+    **Fix:** In Excel, save the file as **CSV UTF-8 (Comma delimited) (\*.csv)** instead of plain CSV. In Google Sheets, *File → Download → Comma Separated Values* produces a UTF-8 file by default.
+  </Accordion>
+
+  <Accordion title="Date format mismatch">
+    **Symptom:** `Invalid date format`
+
+    **Cause:** A date field (e.g. *Last Assessment Date*) uses a format the importer doesn't recognise — American-style `MM/DD/YYYY` when Usafety expects `DD/MM/YYYY` or ISO `YYYY-MM-DD`.
+
+    **Fix:** Convert the column to ISO format (`2026-04-10`) in your spreadsheet and re-import. ISO dates avoid all ambiguity.
+  </Accordion>
+
+  <Accordion title="Too many rows">
+    **Symptom:** The import job times out, or only the first few hundred rows succeed.
+
+    **Cause:** Very large imports (5,000+ rows at once) can hit processing limits.
+
+    **Fix:** Split the CSV into batches of ~1,000 rows and import them one at a time. Usafety processes each batch in the background, so you can close the tab and come back.
+  </Accordion>
+
+  <Accordion title="The job is stuck in 'Processing' for hours">
+    **Symptom:** The import started but the progress bar doesn't move.
+
+    **Cause:** A background worker issue — rare, but it happens.
+
+    **Fix:** Email [info@usafety.ie](mailto:info@usafety.ie) with the import job ID (visible in the URL or on the summary screen). We can restart the job on the back end.
+  </Accordion>
+</AccordionGroup>
+
+## Before your next import — a checklist
+
+If you want to minimise the chance of failures:
+
+- **Save the CSV as UTF-8**, not plain CSV
+- **Use ISO dates** (`2026-04-10`) for any date columns
+- **Trim whitespace** from all cells (`=TRIM(A1)` in Excel)
+- **Check for duplicate rows** within the file itself
+- **Validate emails** — Excel has a custom data-validation rule for this
+- **Batch large files** into chunks of 1,000 rows or fewer
+- **Do a test run** with the first 10 rows to confirm the column mapping is correct
+
+## Still stuck?
+
+If the errors CSV isn't telling you enough, email [info@usafety.ie](mailto:info@usafety.ie) with the original file attached. We can diagnose from our side and usually turn it around the same day.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Importing staff via CSV" icon="upload" href="/importing-data/importing-staff">
+    The main import guide.
+  </Card>
+  <Card title="Managing staff" icon="users" href="/getting-started/managing-staff">
+    What to do with staff once they're imported.
+  </Card>
+</CardGroup>

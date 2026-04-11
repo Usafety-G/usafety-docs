@@ -1,10 +1,105 @@
 ---
 title: "Data retention & GDPR"
-description: "How Usafety stores, processes and deletes employee assessment data."
+description: "How Usafety stores, processes and deletes employee assessment data under EU GDPR and Irish data protection law."
 ---
 
 <Note>
-  This page is being written. It'll cover: where Usafety stores data (EU region), how long assessment records are retained, how to request deletion on behalf of an employee, and how Usafety handles Data Subject Access Requests (DSARs).
-
-  If you need a DPA (Data Processing Agreement) or have a compliance question, email [info@usafety.ie](mailto:info@usafety.ie).
+  This page is a plain-language summary of Usafety's data handling. It is not legal advice. For a formal Data Processing Agreement (DPA), subprocessor list or DPIA support, email [info@usafety.ie](mailto:info@usafety.ie).
 </Note>
+
+## Controller vs processor
+
+Under the **EU General Data Protection Regulation (GDPR)** and the Irish **Data Protection Act 2018**:
+
+- **You (the customer organisation) are the data controller.** You decide which employees are assessed, what data is collected and for how long.
+- **Usafety is the data processor.** We process employee data strictly on your documented instructions, under a Data Processing Agreement.
+
+This split determines who is responsible for what. The controller (you) handles data subject rights requests from your employees, sets the lawful basis for processing, and runs any data protection impact assessment (DPIA) required. The processor (Usafety) is responsible for technical and organisational security measures and for sub-processor management.
+
+## What personal data Usafety processes
+
+A Usafety assessment record can contain:
+
+- **Identifiers** — name, work email, phone number, department, job title, employee ID
+- **Workstation data** — answers to DSE assessment questions, photos uploaded by the employee, assessor notes
+- **Equipment recommendations** — items recommended and fulfilment history
+- **Activity logs** — who did what in the Usafety app and when
+
+Usafety does not collect or store:
+
+- Medical records or diagnoses
+- National identifiers (PPSN)
+- Financial data (bank accounts, payroll)
+- Special-category data as defined in GDPR Art. 9, unless you explicitly add it via a custom field (strongly discouraged)
+
+## Where data is stored
+
+Usafety hosts customer data in the **EU region**. Sub-processors are limited to EU or UK based providers (and US providers with Standard Contractual Clauses or an adequacy decision in place). A current sub-processor list is available on request.
+
+## Retention
+
+Usafety does not automatically delete assessment records. The controller (you) decides how long to retain data, based on:
+
+- Your internal retention policy
+- Employment law record-keeping obligations (commonly **seven years** in Ireland)
+- Any active legal or regulatory hold
+
+If you need records deleted — for example, when an employee leaves and their data is no longer needed, or when a retention period expires — contact [info@usafety.ie](mailto:info@usafety.ie) and we'll process the deletion as a documented instruction.
+
+<Note>
+  **Self-service deletion UI is on the roadmap.** Until then, deletion requests go through support. We log every deletion request and confirm completion in writing.
+</Note>
+
+## Data subject rights (DSARs)
+
+Because you're the controller, any GDPR rights request from your employees — access, rectification, erasure, portability, restriction of processing, objection — comes to you first. Usafety supports you in fulfilling them:
+
+<AccordionGroup>
+  <Accordion title="Right of access (Art. 15)">
+    For a Subject Access Request, email support with the employee's name and email. We can either:
+
+    1. Generate a PDF export of everything Usafety holds on that employee, or
+    2. Give you read-only access to the relevant records so you can compile the response yourself
+
+    Usafety's standard SLA for DSAR support is 7 working days.
+  </Accordion>
+
+  <Accordion title="Right to erasure (Art. 17)">
+    For a deletion request, email support with the employee's name, email and the basis for erasure. We'll delete the records, confirm in writing, and note the deletion on your audit trail.
+
+    Note: if the employee's data is still needed for a legitimate purpose (ongoing litigation, legal retention obligation, public interest), you can lawfully refuse erasure.
+  </Accordion>
+
+  <Accordion title="Right to rectification (Art. 16)">
+    Rectification is self-service — admins can edit any employee record directly from the Staff page.
+  </Accordion>
+
+  <Accordion title="Right to data portability (Art. 20)">
+    Portability means providing the data in a structured, commonly used, machine-readable format. Usafety can generate a CSV or JSON export of an employee's records on request.
+  </Accordion>
+</AccordionGroup>
+
+## Security
+
+Usafety implements industry-standard technical and organisational measures:
+
+- **Encryption in transit** — all connections use TLS 1.2+
+- **Encryption at rest** — database and file storage are encrypted with AES-256
+- **Access control** — role-based permissions inside the app, MFA available on admin accounts
+- **Audit logging** — every action is logged and retained
+- **Secure software development** — code review, automated vulnerability scanning, regular dependency updates
+- **Incident response** — documented breach response procedure with 72-hour notification commitment
+
+## Data Processing Agreement (DPA)
+
+Usafety's DPA is available on request. It incorporates the EU Standard Contractual Clauses where applicable and mirrors GDPR Art. 28 requirements. Email [info@usafety.ie](mailto:info@usafety.ie) if your legal or procurement team needs a copy before signing.
+
+## Reporting a data concern
+
+If you suspect a data handling issue — a security concern, a possible breach, a data subject complaint you can't handle — contact Usafety immediately at [info@usafety.ie](mailto:info@usafety.ie). We treat every report as priority and respond within one working day.
+
+## Related
+
+<Card title="Workspace settings" icon="gear" href="/for-administrators/workspace-settings">
+  Where you control the allowed email domains that can access your data.
+</Card>
